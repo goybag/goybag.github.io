@@ -17,7 +17,7 @@
 
         .container {
             text-align: center;
-            background-color: white;
+            background-color: #F6F1ED; /* 设置框内背景颜色 */
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@
             <img src="https://goybag.com/wp-content/uploads/2024/05/Logo-2-480-300x80.png" alt="GoyBag Logo">
         </div>
         <div class="circle">
-            <span id="countdown">5</span> <!-- Countdown display -->
+            <span id="countdown">3</span> <!-- 倒计时显示 -->
         </div>
         <h1>GoyBag</h1>
         <button class="button" id="redirect-btn">Redirect Now</button>
@@ -100,23 +100,23 @@
     </div>
 
     <script>
-        let countdown = 5; // Set countdown seconds
+        let countdown = 3; // 设置倒计时秒数为3秒
         const countdownElement = document.getElementById("countdown");
         const redirectBtn = document.getElementById("redirect-btn");
 
-        // Countdown functionality
+        // 倒计时功能
         const timer = setInterval(() => {
             countdown--;
             countdownElement.textContent = countdown;
             if (countdown <= 0) {
                 clearInterval(timer);
-                window.location.href = "https://goybag.com"; // Redirect URL
+                window.location.href = "https://goybag.com"; // 重定向到GoyBag
             }
         }, 1000);
 
-        // Manual redirect button functionality
+        // 手动跳转按钮功能
         redirectBtn.addEventListener("click", () => {
-            window.location.href = "https://goybag.com"; // Replace with your redirect URL
+            window.location.href = "https://goybag.com"; // 替换为你的跳转URL
         });
     </script>
 
