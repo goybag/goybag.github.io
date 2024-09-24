@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>倒数跳转</title>
+    <title>GoyBag</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #F6F1ED;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         .container {
@@ -22,14 +22,23 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             width: 300px;
+            border: 2px solid #173F26;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 200px;
         }
 
         .circle {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background-color: #e3f2fd;
-            border: 6px solid #2196f3;
+            background-color: #F6F1ED;
+            border: 6px solid #173F26;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,11 +48,11 @@
         .circle span {
             font-size: 24px;
             font-weight: bold;
-            color: #2196f3;
+            color: #173F26;
         }
 
         .button {
-            background-color: #42a5f5;
+            background-color: #173F26;
             border: none;
             padding: 10px 20px;
             font-size: 18px;
@@ -53,7 +62,7 @@
         }
 
         .button:hover {
-            background-color: #1e88e5;
+            background-color: #125F44;
         }
 
         .footer {
@@ -76,35 +85,38 @@
 <body>
 
     <div class="container">
-        <div class="circle">
-            <span id="countdown">5</span> <!-- 倒计时显示 -->
+        <div class="logo">
+            <img src="https://goybag.com/wp-content/uploads/2024/05/Logo-2-480-300x80.png" alt="GoyBag Logo">
         </div>
-        <h1>Faston</h1>
-        <button class="button" id="redirect-btn">立即跳转</button>
+        <div class="circle">
+            <span id="countdown">5</span> <!-- Countdown display -->
+        </div>
+        <h1>GoyBag</h1>
+        <button class="button" id="redirect-btn">Redirect Now</button>
         <div class="footer">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/lock.png" alt="secure">
-            <span>secure 安全加密</span>
+            <span>Secure Connection</span>
         </div>
     </div>
 
     <script>
-        let countdown = 5; // 设置倒计时秒数
+        let countdown = 5; // Set countdown seconds
         const countdownElement = document.getElementById("countdown");
         const redirectBtn = document.getElementById("redirect-btn");
 
-        // 倒计时功能
+        // Countdown functionality
         const timer = setInterval(() => {
             countdown--;
             countdownElement.textContent = countdown;
             if (countdown <= 0) {
                 clearInterval(timer);
-                window.location.href = "https://new-url.com"; // 重定向URL
+                window.location.href = "https://goybag.com"; // Redirect URL
             }
         }, 1000);
 
-        // 手动跳转按钮功能
+        // Manual redirect button functionality
         redirectBtn.addEventListener("click", () => {
-            window.location.href = "https://new-url.com"; // 替换为你的跳转URL
+            window.location.href = "https://goybag.com"; // Replace with your redirect URL
         });
     </script>
 
